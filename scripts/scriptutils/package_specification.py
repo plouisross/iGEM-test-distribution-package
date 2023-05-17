@@ -27,7 +27,7 @@ SHEET_CONFIG = {
 }
 
 # TODO: rewrite into remappable IDs after the model of identifiers.org/pypi
-DISTRIBUTION_NAMESPACE = 'https://github.com/mburridge96/'
+DISTRIBUTION_NAMESPACE = 'https://github.com/iGEM-Engineering/'
 
 
 def package_stem(package) -> str:

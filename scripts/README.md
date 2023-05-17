@@ -4,7 +4,7 @@ This directory contains scripts that automatically collect, generate, or validat
 These scripts run in sequential stages: 
 
 1. Check package structure and export from Excel files
-    1. `regularize_directories.py` ensures that packages directories are non-nested, that there is one Excel file per package directory, and that every package directory has a `views` subdirectory for storing generated artifacts.
+    1. `regularize_directories.py` ensures that packages directories are non-nested, that there is one Excel file per package, and that every package directory has a `views` subdirectory for storing generated artifacts.
     2. `export_csvs.py` exports a CSV from each user tab of a package Excel file into the corresponding `views` directory, in order to simplify version control diffs.
     3. `export_sbol.py` exports an SBOL specification for the package from the package Excel file into the corresponding `views` directory. This contains all of the information in the Excel file, but is not yet fused with information from imported parts.
 2. Retrieve missing parts
@@ -18,6 +18,30 @@ These scripts run in sequential stages:
     1. `build_distribution.py` combines all of the packages into a single distribution file in the root directory, generates a summary README file, and exports GenBank for inspection and FASTA for synthesis.
 
 The GitHub actions runs these scripts following the YAML files in `.github/workflows`.  The scripts run in the order listed on every user push.
+
+# Local Installation 
+
+Create a python virtual environment (most likely using python venv). Install
+the requirements.txt file. 
+
+```bash
+# Create virtual environment called venv in scripts/ directory. 
+python3 -m venv venv 
+
+# Install requirements.txt file 
+pip install -r requirements.txt
+```
+
+## Running test suite
+
+Tests are written using the python unittest library from the standard library.
+
+To run the full test suite, run the following from the root directory:
+
+```bash
+# Run all the tests.
+python3 -m unittest discover scripts/test/
+```
 
 # SBOL Converter
 
@@ -38,3 +62,4 @@ captured here to provide a stable dependency.
     sudo apt-get install python3-dev
     sudo apt-get install build-essential
     ```
+
