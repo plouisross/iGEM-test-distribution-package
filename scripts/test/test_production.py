@@ -23,7 +23,7 @@ class TestDistributionProduction(unittest.TestCase):
         doc = sbol3.Document()
         doc.read(os.path.join(tmp_sub, EXPORT_DIRECTORY, SBOL_PACKAGE_NAME))
         # composite document should have the following inventory:
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
         expected = {f'{pkg}Anderson_Promoters_in_vector_ins_template', f'{pkg}Anderson_Promoters_in_vector_template',
                     f'{pkg}Other_stuff_ins_template', f'{pkg}Other_stuff_template',
                     'https://synbiohub.org/public/igem/BBa_J23100',
@@ -52,7 +52,7 @@ class TestDistributionProduction(unittest.TestCase):
     def test_build_plan(self):
         """Test ability to collate parts based on a specification"""
         tmp_sub = copy_to_tmp(exports=[SBOL_PACKAGE_NAME])
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
         doc = package_production.expand_build_plan(tmp_sub)
 
         # check if contents of collection match expectation
@@ -86,7 +86,7 @@ class TestDistributionProduction(unittest.TestCase):
         """Test that build plan works when some or all entries are not CombinatorialDerivations"""
         tmp_sub = copy_to_tmp(renames={'non_combinatorial_package.xlsx': 'test_package.xlsx'},
                               package=['BBa_J23101.nt', IGEM_FASTA_CACHE_FILE, IGEM_SBOL2_CACHE_FILE])
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
         export_sbol(tmp_sub)
         package_production.collate_package(tmp_sub)
         doc = package_production.expand_build_plan(tmp_sub)
