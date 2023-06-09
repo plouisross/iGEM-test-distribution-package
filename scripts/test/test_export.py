@@ -5,7 +5,7 @@ import scripts.scriptutils
 
 from scripts.test.helpers import copy_to_tmp
 
-template_path = os.path.join(os.path.pardir, os.path.pardir, os.path.pardir, 'package template.xlsx')
+template_path = os.path.join(os.path.pardir, os.path.pardir, 'package template.xlsx')
 
 
 class TestExportCSV(unittest.TestCase):
