@@ -64,18 +64,16 @@ def package_excel(directory) -> str:
 
 def regularize_directory(dir: str):
     """Ensure that a package has one export directory, no other subdirectories, and precisely one package Excel file
+    Ignores subdirectories related to git and scripting.
     """
     # Check that there is exactly one subdirectory
-    sub_dirs = [s for s in os.scandir(dir) if s.is_dir()]
-    print(sub_dirs)
-    if len(sub_dirs) == 3:
+    ignore_dirs = {'scripts', '.git', '.github'}
+    sub_dirs = [s for s in os.scandir(dir) if s.is_dir() and not s.name in ignore_dirs]
+    if len(sub_dirs) == 0:
         os.mkdir(os.path.join(dir, EXPORT_DIRECTORY))
         print(f' Created missing export directory {EXPORT_DIRECTORY}')
-    elif len(sub_dirs) == 4:
-        if (not sub_dirs[0].name == EXPORT_DIRECTORY and 
-        not sub_dirs[0].name == "scripts" and
-        not sub_dirs[0].name == ".github" and
-        not sub_dirs[0].name == ".git"):
+    elif len(sub_dirs) == 1:
+        if not sub_dirs[0].name == EXPORT_DIRECTORY:
             raise ValueError(f' Found unexpected subdirectory: {sub_dirs[0]}')
     else:  # more than one
         raise ValueError(
