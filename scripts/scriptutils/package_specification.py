@@ -41,9 +41,8 @@ def package_stem(package) -> str:
     ----------
     package_stem: string containing URI 
     """
-    local = urllib.parse.quote(os.path.basename(package), safe='')
+    local = urllib.parse.quote(os.path.basename(package), safe='').removesuffix('.xlsx')
     package_stem = DISTRIBUTION_NAMESPACE + local
-    print(f"Package stem: {package_stem}")
     return package_stem
 
 
@@ -56,7 +55,6 @@ def export_csvs(package: str):
     """
     # Set current directory and name
     package_directory = os.path.dirname(package)
-    package_name = os.path.basename(package)
 
     # Get the package excel file
     package_excel(package_directory)
@@ -94,15 +92,14 @@ def export_sbol(package: str) -> sbol3.Document:
     Document that has been written
     """
     # get workbook and perform conversion
-    print(f"This is package {package}")
     excel_file = package_excel(package)
-    sbol3.set_namespace(package_stem(package))  # TODO: update after resolution of https://github.com/SynBioDex/pySBOL3/issues/288 # pylint: disable=C0301 # noqa: E501
+    sbol3.set_namespace(package_stem(excel_file))  # TODO: update after resolution of https://github.com/SynBioDex/pySBOL3/issues/288 # pylint: disable=C0301 # noqa: E501
     
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", category=UserWarning)  # filter the "data validation not supported" warning
         wb = openpyxl.open(excel_file, data_only=True)
     doc = excel_to_sbol(wb, SHEET_CONFIG)
     # write into the target directory
-    target_name = os.path.join(EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
+    target_name = os.path.join(package, EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
     doc.write(target_name, sbol3.SORTED_NTRIPLES)
     return doc
