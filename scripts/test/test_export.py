@@ -5,7 +5,7 @@ import scripts.scriptutils
 
 from scripts.test.helpers import copy_to_tmp
 
-template_path = os.path.join(os.path.pardir, os.path.pardir, os.path.pardir, 'package template.xlsx')
+template_path = os.path.join(os.path.pardir, os.path.pardir, 'package template.xlsx')
 
 
 class TestExportCSV(unittest.TestCase):
@@ -13,9 +13,10 @@ class TestExportCSV(unittest.TestCase):
         # copy file into temp directory and make the export subdirectory
         tmpsub = copy_to_tmp(package=[template_path])
         testdir = os.path.dirname(os.path.realpath(__file__))
+        test_file = os.path.join(tmpsub, os.path.basename(template_path))
 
         # run the export script
-        scripts.scriptutils.export_csvs(tmpsub)
+        scripts.scriptutils.export_csvs(test_file)
 
         # check if the values are as expected
         test_file = os.path.join(tmpsub, scripts.scriptutils.EXPORT_DIRECTORY, 'Libraries and Composites.csv')

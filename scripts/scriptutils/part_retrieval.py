@@ -15,7 +15,7 @@ import sbol3
 from sbol_utilities.sequence import unambiguous_dna_sequence
 from sbol_utilities.helper_functions import GENETIC_DESIGN_FILE_TYPES
 from sbol_utilities.excel_to_sbol import BASIC_PARTS_COLLECTION
-from .directories import EXPORT_DIRECTORY, SBOL_EXPORT_NAME
+from .directories import EXPORT_DIRECTORY, SBOL_EXPORT_NAME, package_excel
 from .package_specification import package_stem
 from sbol_utilities.conversion import convert_from_fasta, convert_from_genbank, convert2to3
 
@@ -370,12 +370,13 @@ def package_parts_inventory(package: str, targets: List[str] = None) -> PackageI
     """
     id_map = {sbol3.Identified._extract_display_id(uri): uri for uri in (targets or [])}
     inventory = PackageInventory()
+    namespace = package_stem(package_excel(package))
 
     # import FASTAs and GenBank
     for file in sorted(itertools.chain(
             *(glob.glob(os.path.join(package, f'*{ext}')) for ext in GENETIC_DESIGN_FILE_TYPES['FASTA']))):
         is_igem_cache = os.path.basename(file) == IGEM_FASTA_CACHE_FILE
-        prefix = iGEM_SOURCE_PREFIX if is_igem_cache else package_stem(package)
+        prefix = iGEM_SOURCE_PREFIX if is_igem_cache else namespace
         with open(file) as f:
             import_file = ImportFile(file, file_type='FASTA', namespace=prefix)
             for record in SeqIO.parse(f, "fasta"):
@@ -385,7 +386,7 @@ def package_parts_inventory(package: str, targets: List[str] = None) -> PackageI
     for file in sorted(itertools.chain(
             *(glob.glob(os.path.join(package, f'*{ext}')) for ext in GENETIC_DESIGN_FILE_TYPES['GenBank']))):
         is_ncbi_cache = os.path.basename(file) == NCBI_GENBANK_CACHE_FILE
-        prefix = NCBI_PREFIX if is_ncbi_cache else package_stem(package)
+        prefix = NCBI_PREFIX if is_ncbi_cache else namespace
         with open(file) as f:
             import_file = ImportFile(file, file_type='GenBank', namespace=prefix)
             for record in SeqIO.parse(f, "gb"):
