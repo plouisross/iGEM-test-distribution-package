@@ -12,21 +12,21 @@ class TestImportParts(unittest.TestCase):
     def test_inventory(self):
         """Test ability to take inventory of parts already in a directory"""
         tmp_sub = copy_to_tmp(package=['test_sequence.fasta', 'J23102-modified.fasta', 'two_sequences.gb',
-                                       'BBa_J23101.nt'])
+                                       'BBa_J23101.nt', 'test_package.xlsx'])
         inventory = part_retrieval.package_parts_inventory(tmp_sub)
         unique_parts = set(inventory.locations.keys())
         assert len(unique_parts) == 5, f'Expected 5 parts, found {len(unique_parts)}: {unique_parts}'
         assert len(inventory.aliases) == 8, f'Expected 8 aliases, found {len(inventory.aliases)}: {inventory.aliases}'
         assert len(inventory.files) == 4, \
             f'Expected 4 files, found {len(inventory.files)}: {[f.path for f in inventory.files]}'
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/test_package/'
         expected = {f'{pkg}NM_005341_4': f'{pkg}NM_005341_4',
                     f'{pkg}NM_005342': f'{pkg}NM_005342',
                     f'{pkg}NM_005342_4': f'{pkg}NM_005342',
                     f'{pkg}NM_005343': f'{pkg}NM_005343',
                     f'{pkg}NM_005343_4': f'{pkg}NM_005343',
-                    'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified':
-                        'https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified',
+                    'https://github.com/iGEM-Engineering/test_package/J23102_modified':
+                        'https://github.com/iGEM-Engineering/test_package/J23102_modified',
                     'https://synbiohub.org/public/igem/BBa_J23101': 'https://synbiohub.org/public/igem/BBa_J23101',
                     'http://parts.igem.org/J23101': 'https://synbiohub.org/public/igem/BBa_J23101'}
         assert inventory.aliases == expected, f'Inventory aliases do not match expected value: {inventory.aliases}'
