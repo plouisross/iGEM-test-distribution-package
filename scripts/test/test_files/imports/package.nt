@@ -433,59 +433,59 @@
 <https://freegenes.github.io/genbank/BBF10K_000152_seq> <http://sbols.org/v3#hasNamespace> <https://freegenes.github.io/genbank> .
 <https://freegenes.github.io/genbank/BBF10K_000152_seq> <http://sboltools.org/backport#sbol2version> "1" .
 <https://freegenes.github.io/genbank/BBF10K_000152_seq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#description> "Test retrieval of some types not exercised in the primary test package" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#displayId> "BasicParts" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <http://parts.igem.org/BBa_J364007> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <http://sevahub.es/public/Canonical/cd_OriT> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <http://sevahub.es/public/Canonical/lacZ_pUC19> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://freegenes.github.io/genbank/BBF10K_000152> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/BBa_J23101> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/imports/second_fasta> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/imports/second_genbank> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://synbiohub.org/public/igem/BBa_J23100> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#member> <https://www.ncbi.nlm.nih.gov/nuccore/JWYZ01000115> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://sbols.org/v3#name> "Import Test" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/BasicParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/CompositeParts> <http://sbols.org/v3#description> "Test retrieval of some types not exercised in the primary test package" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/CompositeParts> <http://sbols.org/v3#displayId> "CompositeParts" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/CompositeParts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/CompositeParts> <http://sbols.org/v3#name> "Import Test" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/CompositeParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/FinalProducts> <http://sbols.org/v3#description> "Final products desired for actual fabrication" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/FinalProducts> <http://sbols.org/v3#displayId> "FinalProducts" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/FinalProducts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/FinalProducts> <http://sbols.org/v3#name> "Final Products" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/FinalProducts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#description> "J23102-modified a modified version of J23102" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#displayId> "J23102_modified" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#hasSequence> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#name> "J23102-modified" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000167> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#description> "J23102-modified a modified version of J23102" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#displayId> "J23102_modified_sequence" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#elements> "ttgacagctagctcagtcctaggtactgtgctagcTTCCT" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://sbols.org/v3#name> "J23102-modified" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/J23102_modified_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LinearDNAProducts> <http://sbols.org/v3#description> "Linear DNA constructs to be fabricated" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LinearDNAProducts> <http://sbols.org/v3#displayId> "LinearDNAProducts" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LinearDNAProducts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LinearDNAProducts> <http://sbols.org/v3#name> "Linear DNA Products" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LinearDNAProducts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#description> "Was https://synbiohub.programmingbiology.org/public/Eco1C1G1T1/LmrA/1, but this SynBioHub has gone unstable" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#displayId> "LmrA" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/iGEM-distribution/test_package> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#name> "LmrA" .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000316> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
-<https://github.com/iGEM-Engineering/iGEM-distribution/test_package/LmrA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#description> "Test retrieval of some types not exercised in the primary test package" .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#displayId> "BasicParts" .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <http://parts.igem.org/BBa_J364007> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <http://sevahub.es/public/Canonical/cd_OriT> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <http://sevahub.es/public/Canonical/lacZ_pUC19> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://freegenes.github.io/genbank/BBF10K_000152> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://github.com/iGEM-Engineering/test_package/J23102_modified> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://github.com/iGEM-Engineering/test_package/LmrA> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/BBa_J23101> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/imports/second_fasta> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/imports/second_genbank> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://synbiohub.org/public/igem/BBa_J23100> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#member> <https://www.ncbi.nlm.nih.gov/nuccore/JWYZ01000115> .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://sbols.org/v3#name> "Import Test" .
+<https://github.com/iGEM-Engineering/test_package/BasicParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
+<https://github.com/iGEM-Engineering/test_package/CompositeParts> <http://sbols.org/v3#description> "Test retrieval of some types not exercised in the primary test package" .
+<https://github.com/iGEM-Engineering/test_package/CompositeParts> <http://sbols.org/v3#displayId> "CompositeParts" .
+<https://github.com/iGEM-Engineering/test_package/CompositeParts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/CompositeParts> <http://sbols.org/v3#name> "Import Test" .
+<https://github.com/iGEM-Engineering/test_package/CompositeParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
+<https://github.com/iGEM-Engineering/test_package/FinalProducts> <http://sbols.org/v3#description> "Final products desired for actual fabrication" .
+<https://github.com/iGEM-Engineering/test_package/FinalProducts> <http://sbols.org/v3#displayId> "FinalProducts" .
+<https://github.com/iGEM-Engineering/test_package/FinalProducts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/FinalProducts> <http://sbols.org/v3#name> "Final Products" .
+<https://github.com/iGEM-Engineering/test_package/FinalProducts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#description> "J23102-modified a modified version of J23102" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#displayId> "J23102_modified" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#hasSequence> <https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#name> "J23102-modified" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000167> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#description> "J23102-modified a modified version of J23102" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#displayId> "J23102_modified_sequence" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#elements> "ttgacagctagctcagtcctaggtactgtgctagcTTCCT" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://sbols.org/v3#name> "J23102-modified" .
+<https://github.com/iGEM-Engineering/test_package/J23102_modified_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
+<https://github.com/iGEM-Engineering/test_package/LinearDNAProducts> <http://sbols.org/v3#description> "Linear DNA constructs to be fabricated" .
+<https://github.com/iGEM-Engineering/test_package/LinearDNAProducts> <http://sbols.org/v3#displayId> "LinearDNAProducts" .
+<https://github.com/iGEM-Engineering/test_package/LinearDNAProducts> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/LinearDNAProducts> <http://sbols.org/v3#name> "Linear DNA Products" .
+<https://github.com/iGEM-Engineering/test_package/LinearDNAProducts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Collection> .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#description> "Was https://synbiohub.programmingbiology.org/public/Eco1C1G1T1/LmrA/1, but this SynBioHub has gone unstable" .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#displayId> "LmrA" .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#hasNamespace> <https://github.com/iGEM-Engineering/test_package> .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#name> "LmrA" .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000316> .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://github.com/iGEM-Engineering/test_package/LmrA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
 <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/BBa_J23101> <http://sbols.org/v3#description> "BBa_J23101 constitutive promoter family member" .
 <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/BBa_J23101> <http://sbols.org/v3#displayId> "BBa_J23101" .
 <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files/BBa_J23101> <http://sbols.org/v3#hasNamespace> <https://raw.githubusercontent.com/iGEM-Engineering/iGEM-distribution/develop/scripts/test/test_files> .

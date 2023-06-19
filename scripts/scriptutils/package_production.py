@@ -31,7 +31,7 @@ def collate_package(package: str) -> None:
     """
     # read the package specification
     print(f'Collating materials for package {package}')
-    spec_name = os.path.join(EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
+    spec_name = os.path.join(package, EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
     doc = sbol3.Document()
     doc.read(spec_name, sbol3.SORTED_NTRIPLES)
 
@@ -161,7 +161,7 @@ def build_distribution(root: str, package: str) -> sbol3.Document:
     """Given a package specification and an inventory of parts, unify them into a complete SBOL3 package & write it out
 
     :param root: location for distribution
-    :param packages: list of packages to include in distribution
+    :param package: list of packages to include in distribution
     :return: document for joint package
     """
 
@@ -219,7 +219,7 @@ def extract_synthesis_files(root: str, doc: sbol3.Document) -> sbol3.Document:
     """
     # get the collection of linear build products - the things to actually be synthesized
     print(f'Exporting files for synthesis')
-    build_plan = doc.find(f'{DISTRIBUTION_NAMESPACE}{BUILD_PRODUCTS_COLLECTION}')
+    build_plan = doc.find(BUILD_PRODUCTS_COLLECTION)
     if not build_plan or not isinstance(build_plan, sbol3.Collection):
         raise ValueError(f'Document does not contain linear products collection "{BUILD_PRODUCTS_COLLECTION}"')
 

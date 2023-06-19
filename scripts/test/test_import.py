@@ -34,7 +34,8 @@ class TestImportParts(unittest.TestCase):
     def test_import(self):
         """Test ability to retrieve parts from GenBank and iGEM"""
         tmp_sub = copy_to_tmp(
-            package=['test_sequence.fasta', 'J23102-modified.fasta', 'two_sequences.gb', 'BBa_J23101.nt'],
+            package=['test_sequence.fasta', 'J23102-modified.fasta', 'two_sequences.gb', 'BBa_J23101.nt',
+                     'test_package.xlsx'],
             exports=['package_specification.nt']
         )
 

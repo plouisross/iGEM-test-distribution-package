@@ -8,7 +8,7 @@ from sbol_utilities.helper_functions import is_plasmid
 from sbol_utilities.workarounds import id_sort
 from sbol_utilities.component import contained_components
 from .helpers import has_SO_uri
-from .package_production import BUILD_PRODUCTS_COLLECTION, DISTRIBUTION_NAMESPACE
+from .package_production import BUILD_PRODUCTS_COLLECTION
 
 SUMMARY_FILE = 'README.md'
 """File name for markdown summaries"""
@@ -127,7 +127,7 @@ def generate_distribution_summary(root: str, doc: sbol3.Document):
     :return: None
     """
     # TODO: use combinatorial derivations and expansions
-    build_plan = doc.find(f'{DISTRIBUTION_NAMESPACE}{BUILD_PRODUCTS_COLLECTION}')
+    build_plan = doc.find(BUILD_PRODUCTS_COLLECTION)
     print(build_plan)
     if not isinstance(build_plan, sbol3.Collection):
         raise ValueError
