@@ -29,9 +29,16 @@ runs:
     - name: Build distribution
       shell: bash
       run: python3 scripts/build_distribution.py
+    
+    - name: Check if there are any changes
+      shell: bash
+      id: verify_diff
+      run: |
+        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: Commit changes, ready to push
       shell: bash
+      if: steps.verify_diff.outputs.changed == "true"
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
