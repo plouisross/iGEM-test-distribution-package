@@ -204,7 +204,9 @@ def build_distribution(root: str, package: str) -> sbol3.Document:
     if len(report):
         raise ValueError(report)
     print(f'Writing distribution plan')
-    doc.write(os.path.join(root, DISTRIBUTION_NAME), sbol3.SORTED_NTRIPLES)
+    doc_path = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_NAME)
+    print("this is doc_path: ", doc_path)
+    doc.write(doc_path, sbol3.SORTED_NTRIPLES)
     return doc
 
 
@@ -271,7 +273,7 @@ def extract_synthesis_files(root: str, doc: sbol3.Document) -> sbol3.Document:
         raise ValueError('Extracted document for GenBank conversion is invalid')
 
     # export the GenBank
-    gb_path = os.path.join(root, DISTRIBUTION_GENBANK)
+    gb_path = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_GENBANK)
     convert_to_genbank(build_doc, gb_path)
     print(f'Wrote GenBank export file with {n_genbank_constructs} constructs: {gb_path}')
 
@@ -280,7 +282,7 @@ def extract_synthesis_files(root: str, doc: sbol3.Document) -> sbol3.Document:
     # otherwise be munged together with the display_id
     synthesis_ids = sanitize_identifiers_for_synthesis(inserts.keys())
     n_fasta_constructs = 0
-    fasta_path = os.path.join(root, DISTRIBUTION_FASTA)
+    fasta_path = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_FASTA)
     with open(fasta_path, 'w') as out:
         for vector, insert in inserts.items():
             # Find all sequences of nucleic acid type
