@@ -422,7 +422,7 @@ def import_parts(package: str) -> list[str]:
     """
     # First collect the package specification
     package_spec = sbol3.Document()
-    package_spec.read(os.path.join(EXPORT_DIRECTORY, SBOL_EXPORT_NAME))
+    package_spec.read(os.path.join(package, EXPORT_DIRECTORY, SBOL_EXPORT_NAME))
     # package_parts contains the members of each package collection, based on the path that is given above
     package_parts = [p.lookup() for p in package_spec.find(BASIC_PARTS_COLLECTION).members]
     # retrieve part identity. This will be part name or Data Source ID and will be stored in a dictionary,

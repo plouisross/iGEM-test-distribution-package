@@ -31,7 +31,7 @@ def collate_package(package: str) -> None:
     """
     # read the package specification
     print(f'Collating materials for package {package}')
-    spec_name = os.path.join(EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
+    spec_name = os.path.join(package, EXPORT_DIRECTORY, SBOL_EXPORT_NAME)
     doc = sbol3.Document()
     doc.read(spec_name, sbol3.SORTED_NTRIPLES)
 
