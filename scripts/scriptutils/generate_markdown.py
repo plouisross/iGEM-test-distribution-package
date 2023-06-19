@@ -127,7 +127,7 @@ def generate_distribution_summary(root: str, doc: sbol3.Document):
     :return: None
     """
     # TODO: use combinatorial derivations and expansions
-    build_plan = doc.find(f'{DISTRIBUTION_NAMESPACE}{BUILD_PRODUCTS_COLLECTION}')
+    build_plan = doc.find(BUILD_PRODUCTS_COLLECTION)
     print(build_plan)
     if not isinstance(build_plan, sbol3.Collection):
         raise ValueError
