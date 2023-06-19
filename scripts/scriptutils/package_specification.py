@@ -27,7 +27,7 @@ SHEET_CONFIG = {
 }
 
 # TODO: rewrite into remappable IDs after the model of identifiers.org/pypi
-DISTRIBUTION_NAMESPACE = 'https://github.com/iGEM-Engineering/'
+DISTRIBUTION_NAMESPACE = 'https://github.com/iGEM-Engineering'
 
 
 def package_stem(package) -> str:
@@ -42,7 +42,7 @@ def package_stem(package) -> str:
     package_stem: string containing URI 
     """
     local = urllib.parse.quote(os.path.basename(package), safe='').removesuffix('.xlsx')
-    package_stem = DISTRIBUTION_NAMESPACE + local
+    package_stem = f'{DISTRIBUTION_NAMESPACE}/{local}'
     return package_stem
 
 

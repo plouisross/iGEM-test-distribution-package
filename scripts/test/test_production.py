@@ -5,7 +5,7 @@ import filecmp
 import sbol3
 
 from scripts.scriptutils import package_production, EXPORT_DIRECTORY, SBOL_PACKAGE_NAME, IGEM_FASTA_CACHE_FILE, \
-    NCBI_GENBANK_CACHE_FILE, IGEM_SBOL2_CACHE_FILE, BUILD_PRODUCTS_COLLECTION, DISTRIBUTION_NAMESPACE, \
+    NCBI_GENBANK_CACHE_FILE, IGEM_SBOL2_CACHE_FILE, BUILD_PRODUCTS_COLLECTION, \
     DISTRIBUTION_NAME, \
     DISTRIBUTION_FASTA, DISTRIBUTION_GENBANK, export_sbol
 from scripts.test.helpers import copy_to_tmp
@@ -17,13 +17,13 @@ class TestDistributionProduction(unittest.TestCase):
         tmp_sub = copy_to_tmp(exports=['package_specification.nt'],
                               package=['test_sequence.fasta', 'J23102-modified.fasta', 'two_sequences.gb',
                                        'BBa_J23101.nt', IGEM_FASTA_CACHE_FILE, NCBI_GENBANK_CACHE_FILE,
-                                       IGEM_SBOL2_CACHE_FILE])
+                                       IGEM_SBOL2_CACHE_FILE, 'test_package.xlsx'])
 
         package_production.collate_package(tmp_sub)
         doc = sbol3.Document()
         doc.read(os.path.join(tmp_sub, EXPORT_DIRECTORY, SBOL_PACKAGE_NAME))
         # composite document should have the following inventory:
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/test_package/'
         expected = {f'{pkg}Anderson_Promoters_in_vector_ins_template', f'{pkg}Anderson_Promoters_in_vector_template',
                     f'{pkg}Other_stuff_ins_template', f'{pkg}Other_stuff_template',
                     'https://synbiohub.org/public/igem/BBa_J23100',
@@ -52,7 +52,7 @@ class TestDistributionProduction(unittest.TestCase):
     def test_build_plan(self):
         """Test ability to collate parts based on a specification"""
         tmp_sub = copy_to_tmp(exports=[SBOL_PACKAGE_NAME])
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/test_package/'
         doc = package_production.expand_build_plan(tmp_sub)
 
         # check if contents of collection match expectation
@@ -86,7 +86,7 @@ class TestDistributionProduction(unittest.TestCase):
         """Test that build plan works when some or all entries are not CombinatorialDerivations"""
         tmp_sub = copy_to_tmp(renames={'non_combinatorial_package.xlsx': 'test_package.xlsx'},
                               package=['BBa_J23101.nt', IGEM_FASTA_CACHE_FILE, IGEM_SBOL2_CACHE_FILE])
-        pkg = 'https://github.com/iGEM-Engineering/iGEM-test-distribution-package/test_package/'
+        pkg = 'https://github.com/iGEM-Engineering/test_package/'
         export_sbol(tmp_sub)
         package_production.collate_package(tmp_sub)
         doc = package_production.expand_build_plan(tmp_sub)
@@ -120,12 +120,12 @@ class TestDistributionProduction(unittest.TestCase):
         """Test the assembly of a complete distribution"""
         m = {os.path.join(EXPORT_DIRECTORY, 'package-expanded.nt'): os.path.join(EXPORT_DIRECTORY, SBOL_PACKAGE_NAME)}
         tmp_sub = copy_to_tmp(renames=m)
-        root = os.path.dirname(tmp_sub)
-        packages = [tmp_sub]
+        root = tmp_sub
+        packages = [os.path.basename(tmp_sub)]
         doc = package_production.build_distribution(root, packages)
 
         # check if contents match expectation
-        collection = doc.find(f'{DISTRIBUTION_NAMESPACE}/{BUILD_PRODUCTS_COLLECTION}')
+        collection = doc.find(BUILD_PRODUCTS_COLLECTION)
         assert len(collection.members) == 10, f'Expected 10 build products, but found {len(collection.members)}'
         # Total: 55 from package, plus 1 total build collection
         assert len(doc.objects) == 56, f'Expected 56 TopLevel objects, but found {len(doc.objects)}'
