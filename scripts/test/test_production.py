@@ -133,7 +133,7 @@ class TestDistributionProduction(unittest.TestCase):
         # check that the file is identical to expectation
         test_dir = os.path.dirname(os.path.realpath(__file__))
         comparison_file = os.path.join(test_dir, 'test_files', 'distribution', DISTRIBUTION_NAME)
-        test_file = os.path.join(root, DISTRIBUTION_NAME)
+        test_file = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_NAME)
         assert filecmp.cmp(test_file, comparison_file), f'Expanded file is not identical'
 
     def test_synthesis_exports(self):
@@ -155,10 +155,10 @@ class TestDistributionProduction(unittest.TestCase):
         # check that the files are identical to expectations
         test_dir = os.path.dirname(os.path.realpath(__file__))
         comparison_file = os.path.join(test_dir, 'test_files', 'distribution', DISTRIBUTION_FASTA)
-        test_file = os.path.join(root, DISTRIBUTION_FASTA)
+        test_file = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_FASTA)
         assert filecmp.cmp(test_file, comparison_file), f'Exported file is not identical'
         comparison_file = os.path.join(test_dir, 'test_files', 'distribution', DISTRIBUTION_GENBANK)
-        test_file = os.path.join(root, DISTRIBUTION_GENBANK)
+        test_file = os.path.join(root, EXPORT_DIRECTORY, DISTRIBUTION_GENBANK)
         assert filecmp.cmp(test_file, comparison_file), f'Exported file is not identical'
 
 
