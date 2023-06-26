@@ -39,5 +39,5 @@ runs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add */*.gb */*.fasta */*.nt
+        git add *.gb *.fasta *.nt
         git diff-index --quiet HEAD . || git commit -m "Automatically import referenced parts"
