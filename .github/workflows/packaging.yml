@@ -14,17 +14,4 @@ jobs:
       - name: Check out this repository for building
         uses: actions/checkout@v3
       - name: Execute distribution build
-        uses: iGEM-Engineering/iGEM-actions@v1
-      - name: Commit changes, ready to push
-        shell: bash
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add *.nt *.md *.fasta *.gb README.md
-          git add views/*
-          git diff-index --quiet HEAD . || git commit -m "Automatically update exports"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        uses: iGEM-Engineering/iGEM-actions@main
