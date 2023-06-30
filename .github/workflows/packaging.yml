@@ -15,3 +15,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Execute distribution build
         uses: iGEM-Engineering/iGEM-actions@main
+        with:
+          secrets: inherit
+        
+
+  
