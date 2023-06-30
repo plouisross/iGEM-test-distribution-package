@@ -16,7 +16,7 @@ jobs:
       - name: Execute distribution build
         uses: iGEM-Engineering/iGEM-actions@main
         with:
-          secrets: inherit
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
         
 
   
