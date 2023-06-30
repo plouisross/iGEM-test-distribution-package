@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Check out this repository for building
         uses: actions/checkout@v3
-      - name: directories_and_excel
-        uses: mburridge96/igem-actions-test@main
+      - name: Execute distribution build
+        uses: iGEM-Engineering/iGEM-actions@v1
       - name: Commit changes, ready to push
         shell: bash
         run: |
