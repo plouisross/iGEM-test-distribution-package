@@ -8,23 +8,21 @@ Their associated guide RNA scaffold sequences as well as the position of the spa
 
 ### Summary:
 
-- 10 parts _<span style="color:red">8 missing sequences</span>_
-    - CDS: 8
-    -  _<span style="color:red">unspecified role: 2</span>_
-- 0 vectors
-- 9 samples for distribution
+- 9 parts _<span style="color:red">8 missing sequences</span>_
+    - CDS: 9
+- 1 vectors
+- 18 samples for distribution
 
 ### Parts:
 
-- K2558003 in 
-- pSB1C3 in 
-- LbCpf1_or_LbCas12a (CDS) in  _<span style="color:red">missing sequence</span>_
-- SpCas9 (CDS) in  _<span style="color:red">missing sequence</span>_
-- dLbCpf1_or_dLbCas12a (CDS) in  _<span style="color:red">missing sequence</span>_
-- dSpCas9 (CDS) in  _<span style="color:red">missing sequence</span>_
-- dhLwCas13a (CDS) in  _<span style="color:red">missing sequence</span>_
-- dhSpCas9 (CDS) in  _<span style="color:red">missing sequence</span>_
-- hLwCas13a (CDS) in  _<span style="color:red">missing sequence</span>_
-- hSpCas9 (CDS) in  _<span style="color:red">missing sequence</span>_
+- K2558003 (CDS) in pSB1C3
+- LbCpf1_or_LbCas12a (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- SpCas9 (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- dLbCpf1_or_dLbCas12a (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- dSpCas9 (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- dhLwCas13a (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- dhSpCas9 (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- hLwCas13a (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
+- hSpCas9 (CDS) in pSB1C3 _<span style="color:red">missing sequence, ensure file name matches Data Source ID from Excel File</span>_
 
 _Note: automatically generated from package Excel and sequence files; do not edit_

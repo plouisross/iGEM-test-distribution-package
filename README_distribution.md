@@ -1,27 +1,26 @@
 # Distribution Summary
 
-- 19 samples planned for distribution
+- 18 samples planned for distribution
 
 ### Parts:
 
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23100
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23101
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23102
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23103
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23104
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23105
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23106
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23107
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23108
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23109
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23110
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23111
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23113
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23114
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23115
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23116
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23117
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23118
-- Anderson_Promoters_in_vector_Anderson_Promoters_in_vector_ins_BBa_J23119
+- K2558003
+- Cas_variants_K2558003
+- Cas_variants_LbCpf1_or_LbCas12a
+- Cas_variants_SpCas9
+- Cas_variants_dLbCpf1_or_dLbCas12a
+- Cas_variants_dSpCas9
+- Cas_variants_dhLwCas13a
+- Cas_variants_dhSpCas9
+- Cas_variants_hLwCas13a
+- Cas_variants_hSpCas9
+- LbCpf1_or_LbCas12a
+- SpCas9
+- dLbCpf1_or_dLbCas12a
+- dSpCas9
+- dhLwCas13a
+- dhSpCas9
+- hLwCas13a
+- hSpCas9
 
 _Note: automatically generated from distribution SBOL file; do not edit_
